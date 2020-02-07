@@ -38,6 +38,7 @@ function totalColsArray($array, $rows, $colInput)
     return $total;
 }
 
+// Check Valid value
 function isValid($number)
 {
     return $number != null && is_numeric($number) && $number > 0;

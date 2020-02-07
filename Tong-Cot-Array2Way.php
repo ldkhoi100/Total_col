@@ -3,8 +3,8 @@ $array = [];
 $error[] = null;
 
 if (isset($_POST['submit'])) {
-    $rows = (int) ($_POST['rows']);
-    $cols = (int) ($_POST['cols']);
+    $rows = $_POST['rows'];
+    $cols = $_POST['cols'];
     $inputCol = $_POST['inputCol'];
 
     // Call Function creat and show Matrix
@@ -40,12 +40,10 @@ if (isset($_POST['submit'])) {
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>[*Bài tập] Tính tổng các số ở một cột xác định</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <!-- Creat form -->
     <form action="" method='POST'>
@@ -71,5 +69,4 @@ if (isset($_POST['submit'])) {
     <!-- Show Total of Col Matrix -->
     <span><?= (isset($TotalCOLS) && Isvalid($rows) && Isvalid($cols)) ? "<br> Tổng cột $inputCol là: " . $TotalCOLS : '' ?></span>
 </body>
-
 </html>
