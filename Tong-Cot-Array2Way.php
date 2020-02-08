@@ -37,6 +37,10 @@ if (isset($_POST['submit'])) {
         $TotalCOLS = totalColsArray($creatArr, $rows, $inputCol);
     }
 }
+
+if (isset($_POST['button'])) {
+    echo totalColsArray($creatArr, $rows, $inputCol);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,10 +51,10 @@ if (isset($_POST['submit'])) {
 <body>
     <!-- Creat form -->
     <form action="" method='POST'>
-        <p>Nhập số dòng: <input type="text" name='rows' value='<?php echo isset($rows) ? $rows : '10'; ?>'>
+        <p>Nhập số dòng: <input type="text" name='rows' value='<?= isset($rows) ? $rows : '10'; ?>'>
             <span><?= $error[0] ?? '' ?></span>
         </p>
-        <p>Nhập số cột: <input type="text" name='cols' value='<?php echo isset($cols) ? $cols : '10'; ?>'>
+        <p>Nhập số cột: <input type="text" name='cols' value='<?= isset($cols) ? $cols : '10'; ?>'>
             <span><?= $error[1] ?? '' ?></span>
         </p>
         <p>Nhập vị trí của cột cần tính tổng: <input type="text" name='inputCol'
