@@ -37,10 +37,6 @@ if (isset($_POST['submit'])) {
         $TotalCOLS = totalColsArray($creatArr, $rows, $inputCol);
     }
 }
-
-if (isset($_POST['button'])) {
-    echo totalColsArray($creatArr, $rows, $inputCol);
-}
 ?>
 <!DOCTYPE html>
 <html>
